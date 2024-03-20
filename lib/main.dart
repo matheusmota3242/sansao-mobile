@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sansao_mobile/training_list.dart';
+import 'package:sansao_mobile/training/training_references_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       //home: const MyHomePage(title: 'Flutter Demo Home Page'),
-      home: const TrainingList(),
+      home: const TrainingReferencesScreen(),
     );
   }
 }
