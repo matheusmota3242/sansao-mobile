@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sansao_mobile/training/training_references_screen.dart';
+import 'package:sansao_mobile/auth/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,27 +14,48 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       themeMode: ThemeMode.dark,
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // TRY THIS: Try running your application with "flutter run". You'll see
-        // the application has a purple toolbar. Then, without quitting the app,
-        // try changing the seedColor in the colorScheme below to Colors.green
-        // and then invoke "hot reload" (save your changes or press the "hot
-        // reload" button in a Flutter-supported IDE, or press "r" if you used
-        // the command line to start the app).
-        //
-        // Notice that the counter didn't reset back to zero; the application
-        // state is not lost during the reload. To reset the state, use hot
-        // restart instead.
-        //
-        // This works for code too, not just values: Most code changes can be
-        // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+          // This is the theme of your application.
+          //
+          // TRY THIS: Try running your application with "flutter run". You'll see
+          // the application has a purple toolbar. Then, without quitting the app,
+          // try changing the seedColor in the colorScheme below to Colors.green
+          // and then invoke "hot reload" (save your changes or press the "hot
+          // reload" button in a Flutter-supported IDE, or press "r" if you used
+          // the command line to start the app).
+          //
+          // Notice that the counter didn't reset back to zero; the application
+          // state is not lost during the reload. To reset the state, use hot
+          // restart instead.
+          //
+          // This works for code too, not just values: Most code changes can be
+          // tested with just a hot reload.
+          //colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
+          useMaterial3: true,
+          scaffoldBackgroundColor: Colors.black,
+          iconButtonTheme: IconButtonThemeData(style: ButtonStyle(
+              iconColor: MaterialStateProperty.resolveWith((states) {
+            return Colors.white;
+          }))),
+          bottomNavigationBarTheme: BottomNavigationBarThemeData(
+              selectedItemColor: Colors.green[500],
+              unselectedItemColor: Colors.white,
+              backgroundColor: Colors.black),
+          appBarTheme: const AppBarTheme(
+              backgroundColor: Colors.black,
+              centerTitle: true,
+              titleTextStyle: TextStyle(
+                  color: Colors.white,
+                  fontSize: 22,
+                  fontWeight: FontWeight.w600)),
+          textTheme: const TextTheme(
+              labelMedium: TextStyle(color: Colors.white, fontSize: 14),
+              titleMedium: TextStyle(color: Colors.white, fontSize: 20),
+              bodySmall: TextStyle(color: Colors.white, fontSize: 14))),
+
       //home: const MyHomePage(title: 'Flutter Demo Home Page'),
-      home: const TrainingReferencesScreen(),
+      home: const HomeScreen(),
     );
   }
 }

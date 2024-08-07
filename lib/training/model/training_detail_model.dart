@@ -6,5 +6,5 @@ class TrainingDetail {
 
   TrainingDetail.fromJson(Map<String, dynamic> json)
       : trainingTypeName = json['trainingTypeName'],
-        training = json['training'];
+        training = Training.fromJson(json['training']);
 }
