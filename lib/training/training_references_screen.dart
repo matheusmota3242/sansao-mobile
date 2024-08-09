@@ -59,7 +59,7 @@ class _TrainingReferencesScreenState extends State<TrainingReferencesScreen> {
                           },
                         );
                       })
-                  : Container(),
+                  : const Center(),
             );
           }),
       bottomNavigationBar:
